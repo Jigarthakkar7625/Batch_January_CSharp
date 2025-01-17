@@ -136,13 +136,13 @@ namespace MyDemo // Family name
 
 
             // Logical >> &&, ||, !
-            int a = 10;
-            int b = 20;
+            //int a = 10;
+            //int b = 20;
 
-            int c = 30;
-            int d = 40;
+            //int c = 30;
+            //int d = 40;
 
-            var result = a == b || b == c;
+            //var result = a == b || b == c;
 
             // 1 && 1 >> 1
             // 1 && 0 >> 0
@@ -156,12 +156,226 @@ namespace MyDemo // Family name
             // 0 || 0 >> 0
 
 
-            // Bitwise 
+            // Bitwise  >> HW
 
-            // Unary
+
             // ternary operator
 
+            // Flow Statement >> 
+            //  Selection Statement (Conditional) (if, Switch)
+            // Iteration Statement (for, do-while, while, foreach)
+            // Jump (Break, Continue, return, Goto(X))
 
+            int a = 10;
+            int b = 10;
+            //if (a != 10) // Check first
+            //{
+            //    Console.WriteLine("TRUE");
+            //    //if (b == 10)
+            //    //{
+            //    //    Console.WriteLine("TRUE");
+
+            //    //}
+            //}
+            //else if (b == 10)
+            //{
+            //    Console.WriteLine("TRUE");
+
+            //}
+
+            //else
+            //{
+            //    Console.WriteLine("FALSE");
+            //}
+
+            string c = "C#";
+            if (c == "C#" || c == "Java" || c == "PHP")
+            {
+
+            }
+
+            String abc = "APPLE";
+
+            // A = 1
+            // P = 2
+            // L = 1
+            // E = 1
+
+            //switch (c)
+            //{
+
+            //    case "C#":
+            //        Console.WriteLine(1);
+            //    case "Java":
+            //    case "PHP":
+            //        Console.WriteLine(1);
+            //        break;
+
+            //    case "Jigar":
+            //    case "Thakkar":
+            //    case "Hello":
+            //        Console.WriteLine(10);
+            //        break;
+            //    //case 1:
+            //    //    Console.WriteLine(1);
+            //    //    break;
+            //    //case 2:
+            //    //    Console.WriteLine(2);
+            //    //    break;
+            //    //case 10:
+            //    //    Console.WriteLine(10);
+            //    //    break;
+            //    default:
+            //        Console.WriteLine(10);
+            //        break;
+
+            //}
+
+
+            // 
+
+            int v = 10;
+
+            //for (int i = 0; i <= v; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            //while (v <= 1) // First condition check thase
+            //{
+            //    Console.WriteLine(v);
+            //    v++;
+            //}
+
+            //do // Always execute first time
+            //{
+            //    Console.WriteLine(v);
+            //    v++;
+
+            //} while (v <= 1);
+
+
+
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+
+            //// ctrl + k+d >> Formating
+            //for (int i = 0; i <= 10; i++)
+            //{
+            //    if (i == 5)
+            //    {
+            //        break;
+            //    }
+            //    Console.WriteLine(i);
+
+            //}
+
+            //for (int i = 0; i <= 10; i++)
+            //{
+            //    if (i == 5)
+            //    {
+            //        continue;
+            //    }
+            //    Console.WriteLine(i);
+
+            //}
+
+
+
+            // Break : 
+
+
+
+
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+
+            int d = 10;
+            int h = 20;
+
+
+
+            //getData(ref d);
+
+            //Console.WriteLine(d);
+            //Console.ReadLine();
+
+            //// Call by value and Call by reference
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    int y = a * 20;
+            //    int res = b * 30;
+
+            //    getData(y);
+
+
+            //}
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    int y = a * 300;
+            //    int res = b * 400;
+
+            //    getData(y); //
+
+
+
+            //}
+
+            // Recursion : 
+
+
+            var result1 =  fun(5);
+
+            //5! >> 5 * 4 * 3 * 2 * 1 >> 120
+            //1! >> 1
+
+
+            Console.ReadLine();
+
+        }
+
+        public static int fun(int d) // AM // REturn type // F Name
+        {
+            if (d == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return (d * fun(d - 1));
+            }
+            //if (d > 0)
+            //{
+            //    Console.WriteLine(d);
+            //    fun(d - 1);
+            //}
+
+        }
+
+        public static void getData(ref int d) // AM // REturn type // F Name
+        {
+            d = 150;
+
+            //getData(10);
+
+
+            //if (y == 200)
+            //{
+            //    Console.WriteLine("fds");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("fds");
+            //}
         }
     }
 }
