@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +18,43 @@ namespace MyDemo // Family name
 
     public class Program
     {
+
+  
         static void Main(string[] args)
         {
+
+            //.ToString();
+            // Convert.ToString();
+
+            string abcdddd = null;
+            string newVal = abcdddd.ToString();
+            string newVal111 = Convert.ToString(abcdddd);
+
+
+            // Boxing and unBoxing >> HW
+
+            // ReadOnly and Const
+
+            Customer customer = new Customer(); // OBJECT
+
+            Customer customer1 = null;
+            customer1.ToString();
+
+            //string newVal111 = Convert.ToString(abcdddd);
+
+
+            customer.CustomerId = null;
+
+            customer.CustomerId = 1500;
+
+
+            customer.GetData();
+
+
+            //Customer customer1 = new Customer(100); // OBJECT
+
+            //int acc = customer1.CustomerId;
+            //customer.GetData();
 
             //debug : F10
             // Debug >> Inside defination >> F11
@@ -166,8 +202,8 @@ namespace MyDemo // Family name
             // Iteration Statement (for, do-while, while, foreach)
             // Jump (Break, Continue, return, Goto(X))
 
-            int a = 10;
-            int b = 10;
+            //int a = 10;
+            //int b = 10;
             //if (a != 10) // Check first
             //{
             //    Console.WriteLine("TRUE");
@@ -333,10 +369,91 @@ namespace MyDemo // Family name
             // Recursion : 
 
 
-            var result1 =  fun(5);
+            var result1 = fun(5);
 
             //5! >> 5 * 4 * 3 * 2 * 1 >> 120
             //1! >> 1
+
+
+
+            
+
+            //Console.WriteLine(first + " " + second);
+            //Console.WriteLine(string.Concat(first + " " + second));
+
+            //if (string.Equals(first, second))
+            //{
+
+            //}
+
+
+            //if (first.Equals(second))
+            //{
+
+            //}
+
+            //string first1 = "Jigar \"fdsds\" dsfdsfsd fd";
+
+
+            //string dynamic = string.Empty;
+            //dynamic += "Newstring";
+
+            //dynamic += "dfdsdsfsd";
+            //dynamic += "fdsfsfsf";
+
+            //// String interpolation : 
+
+            //string abccccc = "jigar Yatri # Krtul # Arti";
+
+            //Console.WriteLine($"My Name is : {abccccc} !!!");
+
+            //string result = "My Name is : " + abccccc + " !!!"; // memory 
+
+            //// Split : 
+
+            //var splitData = abccccc.Split('#');
+
+            //foreach (var item in splitData)
+            //{
+
+            //}
+
+            ////Substring : 
+
+            //string resultSubString = abccccc.Substring(3, 6);
+
+            string first = "  J i g a g  r g fdf  dfdf g jigar thakkar  ";
+            string second = "Jigar Thakkar";
+
+            //string trimResult = first.Trim();
+            //string trimResult = second.Replace("Thakkar","Patel");
+
+            //int trimResultInde = first.IndexOf('g'); // index
+
+            //int trimResultIndexx = first.LastIndexOf("HAR"); // Index
+
+            //bool abcsds = second.StartsWith("Ji");
+            //bool abcsdsdsd = second.EndsWith("ar");
+
+
+            string myDecimal = "423";  //7 Character >>> 4230000
+
+            //string result = myDecimal.PadLeft(7, '0');
+            //string results = myDecimal.PadRight(7, '0');
+
+
+            if (string.Compare(first, "fgdgd", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+
+            }
+
+
+
+
+
+
+
+
 
 
             Console.ReadLine();
