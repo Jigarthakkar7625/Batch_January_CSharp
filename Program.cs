@@ -19,9 +19,29 @@ namespace MyDemo // Family name
     public class Program
     {
 
-  
+
         static void Main(string[] args)
         {
+
+
+            AccessModifires accessModifires = new AccessModifires();
+
+            accessModifires.UserName = "fsf";
+            accessModifires.UserId = 123;
+
+            accessModifires.getData();
+            accessModifires.PrivateGetData();
+
+
+            var PassinCopy = new Customer();
+            Customer copyConstr = new Customer(PassinCopy); // OBJECT // Memory sto
+
+            Customer customer = new Customer(); // OBJECT // Memory sto
+            Customer customer22 = new Customer(10); // OBJECT // Memory sto
+
+            StaticClass.customerId = 10; // No need to create object 
+
+            
 
             //.ToString();
             // Convert.ToString();
@@ -35,7 +55,7 @@ namespace MyDemo // Family name
 
             // ReadOnly and Const
 
-            Customer customer = new Customer(); // OBJECT
+            
 
             Customer customer1 = null;
             customer1.ToString();
