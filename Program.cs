@@ -22,15 +22,98 @@ namespace MyDemo // Family name
 
         static void Main(string[] args)
         {
+            // Exception handling:
 
 
-            AccessModifires accessModifires = new AccessModifires();
 
-            accessModifires.UserName = "fsf";
-            accessModifires.UserId = 123;
+            try
+            {
 
-            accessModifires.getData();
-            accessModifires.PrivateGetData();
+                MyPartialClass myPartialClass = new MyPartialClass();
+                myPartialClass.UserId = 1;
+                myPartialClass.UserName = "fds";
+                myPartialClass.getData();
+
+                myPartialClass.getData(1);
+
+                //try
+                //{
+                //    int a1 = 10;
+                //    int b1 = 0;
+
+                //    var resul1111 = a1 / b1;
+                //}
+                //catch (Exception e) //Exception e >> Global
+                //{
+                //    Console.WriteLine(e);
+                //}
+                //finally
+                //{
+                //    Console.WriteLine("Finally");
+                //}
+
+                //int a = 10;
+                //int b = 10;
+
+                //var result = a / b;
+
+                throw new Exception("Useer ID is not added");
+
+                // int a = 10;
+
+            }
+
+
+            catch (ArgumentException e) //Exception e >> Global
+            {
+                Console.WriteLine(e);
+            }
+
+            catch (NullReferenceException e) //Exception e >> Global
+            {
+                Console.WriteLine(e);
+            }
+            catch (FormatException e) //Exception e >> Global
+            {
+                Console.WriteLine(e);
+            }
+            catch (DivideByZeroException e) //Exception e >> Global
+            {
+                Console.WriteLine(e);
+            }
+            catch (Exception e) //Exception e >> Global
+            {
+                Console.WriteLine(e);
+            }
+            finally // Everytime this will called
+            {
+                Console.WriteLine("Finally");
+            }
+
+
+
+            Polymorephosm polymorephosm = new Polymorephosm();
+
+            Polymorephosm paarentObject11 = new Polymorephosm();
+            var getresponse12 = paarentObject11.ParentGetData(1, "fsd");
+
+            Polymorephosm paarentObject = new ChildPolymorephosm();
+            var getresponse = paarentObject.ParentGetData(1, "fsd");
+
+            //polymorephosm.GetData(1,"jigar");
+
+
+            //polymorephosm.GetData(2);
+
+            //polymorephosm.GetData(1);
+
+            //AccessModifires accessModifires = new AccessModifires();
+
+            //accessModifires.UserName = "fsf";
+            //accessModifires.UserId = 123;
+
+            //accessModifires.getData();
+            //accessModifires.PrivateGetData();
 
 
             var PassinCopy = new Customer();
@@ -41,7 +124,7 @@ namespace MyDemo // Family name
 
             StaticClass.customerId = 10; // No need to create object 
 
-            
+
 
             //.ToString();
             // Convert.ToString();
@@ -55,7 +138,7 @@ namespace MyDemo // Family name
 
             // ReadOnly and Const
 
-            
+
 
             Customer customer1 = null;
             customer1.ToString();
@@ -396,7 +479,7 @@ namespace MyDemo // Family name
 
 
 
-            
+
 
             //Console.WriteLine(first + " " + second);
             //Console.WriteLine(string.Concat(first + " " + second));
