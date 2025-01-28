@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -22,9 +23,170 @@ namespace MyDemo // Family name
 
         static void Main(string[] args)
         {
+
+            // DSA :: 
+
+            // 1 : Generic collection :: Rule and regulation
+            // List<T>
+
+            //List<UserClass> ints22 = new List<UserClass>();
+
+            //UserClass1 UserClass1 = new UserClass1();
+            //UserClass1.MyProperty = 1;
+            //UserClass1.MyProperty11 = "jigar";
+            //UserClass1.IsACtive = true;
+
+            ////ints22.Add(UserClass1);
+
+            //ints22.Add(new UserClass { MyProperty = 1, MyProperty11 = "jigar", IsACtive = true });
+
+
+            //List<int> ints = new List<int>();
+            //ints.Add(1);
+            //ints.Add(2);
+            //ints.Add(3);
+            //ints.Add(4);
+
+
+            //ints.Remove(4);
+
+            //// ints.RemoveAt(10);
+            ////ints.Clear();
+
+            //bool a = ints.Contains(4);
+
+            //List<int> ints1 = new List<int>();
+            //ints1.Add(5);
+            //ints1.Add(6);
+
+
+            //ints.AddRange(ints1);
+
+            //int count = ints.Count;
+
+            //if (ints.Count > 0)
+            //{
+            //    //
+            //}
+
+
+
+
+            //foreach (var item in ints)
+            //{
+            //    Console.Write(item);
+
+            //}
+            //Console.ReadLine();
+
+
+
+
+            // Dictionaty<TKey,Tvalue>
+
+            Dictionary<int, string> values = new Dictionary<int, string>();
+            //Dictionary<int, string> values = new Dictionary<int, string>();
+            //values.Add(1, null);
+            //values.Add(2, null);
+            //values.Add(3, null);
+            //foreach (var item in values)
+            //{
+            //    Console.Write(item.Key);
+            //    Console.Write(item.Value);
+            //}
+
+
+            // Queue<T> > FIFO
+            //Queue<int> queue = new Queue<int>(); 
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);  
+            //queue.Enqueue(5);
+
+            //queue.Dequeue();
+
+            //var peekElement = queue.Peek(); // 
+
+            //queue.Clear();
+            //var c = queue.Count;
+
+            //Console.ReadLine();
+
+
+            //// Stack<T> :: LIFO
+            //Stack<int> stack = new Stack<int>();
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+
+            //stack.Pop();
+
+            //var a = stack.Peek();
+
+
+            //// Hashtable<T>
+            //HashSet<int> set = new HashSet<int>(); // unique value store
+            //set.Add(10);
+            //set.Add(20);
+            //set.Add(10);
+
+
+
+            // 2. Non-Generic collection :: NO
+            // ArrayList
+            //ArrayList arrayList = new ArrayList();
+            //arrayList.Add(1);
+            //arrayList.Add("jigar");
+            //arrayList.Add("jigar");
+            //arrayList.Add(true);
+            //arrayList.Add('C');
+
+
+            //// Queue
+            //Queue queue = new Queue();
+            //queue.Enqueue(1);
+            //queue.Enqueue("dsada");
+            //queue.Enqueue(false);
+
+            //// Stack
+
+            // Hashtable
+
+            Hashtable hashtable = new Hashtable();
+            hashtable.Add(1, "jigar");
+            hashtable.Add("sdsd", "jigar12121");
+            hashtable.Add(true, false);
+            //hashtable.Add("sdsd", "sasdffdsf");
+
+            // SortedList
+            SortedList SortedList1 = new SortedList();
+            SortedList1.Add(4, "jigar");
+            SortedList1.Add(2, "jigar12121");
+            SortedList1.Add(5, false);
+            //SortedList1.Add("sdsd", "sasdffdsf");
+
+
+            //
+
+            //var tuple = new Tuple<int, string, string>(10, "str", "fdg");
+            //var b = tuple.Item1;
+            //var a = tuple.Item2;
+
+            List<(int id, string name, bool isavtive)> lisrt = new List<(int, string, bool)>();
+
+            lisrt.Add((id: 1, name: "jigar", isavtive: true));
+            lisrt.Add((id: 1, name: "jigar", isavtive: true));
+            lisrt.Add((id: 1, name: "jigar", isavtive: true));
+
+
+
             // Exception handling:
 
-
+            // FileIO
+            // Multithreading
+            // GC
 
             try
             {

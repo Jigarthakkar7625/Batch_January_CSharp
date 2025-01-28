@@ -109,4 +109,19 @@ namespace MyDemo
     }
 
 
+    public class UserClass 
+    {
+        public int MyProperty { get; set; }
+        public string MyProperty11 { get; set; }
+        public bool IsACtive { get; set; }
+    }
+
+    public class UserClass1
+    {
+        public int MyProperty { get; set; }
+        public string MyProperty11 { get; set; }
+        public bool IsACtive { get; set; }
+    }
+
+
 }
