@@ -1,11 +1,15 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-
+using static MyDemo.Enum;
 
 namespace MyDemo // Family name
 {
@@ -17,12 +21,168 @@ namespace MyDemo // Family name
     //.NET CORE : open source >> Platform ind...
 
 
-    public class Program
+    delegate int MyDelegate(int n);
+
+    public class Delegates
+    {
+        // Method > As Parameter pass karvu che
+
+        public static int AddData(int a)
+        {
+            return a + 10;
+
+        }
+
+        public static int MulData(int a)
+        {
+            return a * 10;
+
+        }
+    }
+
+    public static class Program
     {
 
-
+       
         static void Main(string[] args)
         {
+
+            //int[] ints1 = { 1, 2, 3 };
+            var fsfdsffdsf = getData122(true,11,"dassd","fsdf",3243,'s');
+
+            // Delegate
+            MyDelegate d1 = new MyDelegate(Delegates.AddData);
+            MyDelegate d2 = new MyDelegate(Delegates.MulData);
+
+            var value = d1(20);
+
+
+
+
+
+
+
+            var monday = (int)Days.Monday;
+            var monday1 = (int)Days.Tuesday;
+            var monday2 = (int)Days.Wednesday;
+            var monday3 = (int)Days.Thursday;
+            var monday4 = (int)Days.Friday;
+            var monday5 = (int)Days.Saturday;
+            var monday6 = (int)Days.Sunday;
+
+            int abcdsad = 10;
+
+
+            Type trre = abcdsad.GetType();
+
+
+
+            Type t = typeof(MyDelegate);
+            Type t11 = typeof(System.String);
+
+            Console.WriteLine(t11.FullName);
+            Console.WriteLine(t11.BaseType);
+            Console.WriteLine(t11.IsClass);
+            Console.WriteLine(t11.IsEnum);
+
+
+
+            var getDesc = Days.Monday.DescriptionAttr();
+            //foreach (var item in Enum.GetValues(typeof(Days)))
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+            List<int> ints = new List<int> { 1, 2, 3 };
+            ints.Add(1);
+
+            GenericConstrain<bool> genericConstrain = new GenericConstrain<bool>();
+            genericConstrain.Add(false, true);
+
+            GenericConstrain<int> genericConstrain1 = new GenericConstrain<int>();
+            genericConstrain1.Add(1, 2);
+            genericConstrain1.Add(4, 3);
+
+
+            // Class : 
+            GenericConstrainClass<string> genericConstrainClass = new GenericConstrainClass<string>();
+
+            GenericConstrainClass<Polymorephosm> genericConstrainClass1 = new GenericConstrainClass<Polymorephosm>();
+            Polymorephosm polymorephosm1 = new Polymorephosm();
+
+            genericConstrainClass1.Add(polymorephosm1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            List<Polymorephosm> ints2 = new List<Polymorephosm>();
+
+
+            //var tuple = Tuple.Create(1, 2, 3, 4, "5", true, 7, Tuple.Create(1, 2, 3, 4));
+
+
+            //var i1 = tuple.Item1;
+            //var i2 = tuple.Item7;
+            //var rest = tuple.Rest; // Last element
+
+            //var rest11 = tuple.Rest.Item1; // Last element
+
+            //List<Tuple<int, string>> list1 = new List<Tuple<int, string>>
+            //{
+            //    Tuple.Create(1,"jigar"),
+            //    Tuple.Create(1,"Nidhi"),
+            //};
+
+            //foreach (var item in list1)
+            //{
+            //    //item.Item1
+            //}
+
+
+
+
+
+
+
+            // fibbo :
+
+            //List<int> ints = new List<int> { 1, 2, 3, 4, 5, 3 };
+
+            //var dec = ints.OrderByDescending(x => x).ToList();
+
+            //var getOdd = ints.Where(x => x % 2 !=0).ToList();
+
+
+            ////var dec1 = ints.Take(5).TakeWhile().ToList();
+
+            //// Fibboci >> 
+            //int n = 10;
+            //int a = 0, b = 1, c=0;
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.WriteLine(a);
+            //    c = a + b;
+            //    a = b;
+            //    b = c;
+            //}
+
+            //Console.ReadLine();
+
 
             // DSA :: 
 
@@ -489,11 +649,11 @@ namespace MyDemo // Family name
             //    Console.WriteLine("FALSE");
             //}
 
-            string c = "C#";
-            if (c == "C#" || c == "Java" || c == "PHP")
-            {
+            //string c = "C#";
+            //if (c == "C#" || c == "Java" || c == "PHP")
+            //{
 
-            }
+            //}
 
             String abc = "APPLE";
 
@@ -759,5 +919,30 @@ namespace MyDemo // Family name
             //    Console.WriteLine("fds");
             //}
         }
+
+        //var fsfdsffdsf = getData122(true, 11, "dassd", "fsdf", 3243, 's');
+        public static int getData122(params object[] d) // AM // REturn type // F Name
+        {
+            //d = 150;
+            foreach (var item in d)
+            {
+
+            }
+            return 1;
+
+        }
+
+        public static string DescriptionAttr<T>(this T source)
+        {
+            FieldInfo fi = source.GetType().GetField(source.ToString());
+
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])fi.GetCustomAttributes(
+                typeof(DescriptionAttribute), false);
+
+            if (attributes != null && attributes.Length > 0) return attributes[0].Description;
+            else return source.ToString();
+        }
     }
+
+   
 }

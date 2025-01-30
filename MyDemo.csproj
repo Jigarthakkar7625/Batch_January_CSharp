@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="AccessModifires.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="GenericConstrain.cs" />
     <Compile Include="Inharitance.cs" />
     <Compile Include="Polymorephosm.cs" />
     <Compile Include="Program.cs" />
